@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Platzi CMS</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Portafolio/estilos.css">    
+    <!-- <link rel="stylesheet" href="Portafolio/media.css" media="screen and (max-width:768px)"> --><!--  recorda q esto es una manera de hacerlo y es la + reco. pero en el curso pondremos los mediaqueries en la hoja de estilos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- aca  aclaramos q se va a ver en un principio con un ancho de 320px que aca siempre debe ser px, no otra medida. Aca estamos diciendo q el tamaño de ancho del viewport va a ser igual al tamaño del ancho de nuestro dispositivo. initial-scale=1.0 para indicar el escalado según el dispositivo es bueno indicar que 1= 100% del zoom
+      
+      -->
+</head>
+<body>
+  <!-- tag recomnendado p usar iconos -->
+  <i class="icon-menu burger-button" id="burger-menu"></i> 
+  <header class="header">
+    <div class="container">
+      <figure class="logo">
+        <img src="images/logo-frontend.png"  alt="logo de frontend"/> 
+      </figure>
+      <nav class="menu">
+        <ol>
+          <li>
+             <a class="link" href="#Portafolio">Portafolio</a> 
+          </li>
+          <li>
+              <a class="link" href="#eventos">Experiencia</a> 
+           </li>
+           <li>
+              <a class="link"  href="#contacto">Trabajemos juntos</a> 
+           </li>
+        </ol>
+      </nav>         
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="container">
+      <h1>
+        Hola! Soy <strong>Carlos Manuel Sosa</strong>,<br> Desarrollador <strong>Frontend</strong> con <br> pasión por el <strong> aprendizaje</strong>
+      </h1>
+      <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio">  
+    </div>
+  </section>  
+  
+  
+  <section id="Portafolio" class="portfolio">
+    <div class="container">
+      <h2>Portafolio (Proyectos Destacados)</h2>  
+      <article class="project">
+        <div class="project-details">
+          <h3 class="project-title">Arquitectura Frontend</h3>
+          <h5 class="project-course">Las bases: HTML, CSS y Javascript</h5>
+          <p class="project-date"><small><strong>Fecha:</strong> 8/07/2020</small></p>  
+          <p class="project-url"><small><strong>Puedes verlo en:  </strong><a class="link" href="https://platzi.com/arquitecto/" target="_blank">https://platzi.com/arquitecto</a></small></p>  
+          <p class="project-description">Parte de la labor de ser un desarrollador Frontend es aplicar diferentes técnicas y tecnologías para llevar a cabo una UI y UX deseados. Entre sus responsabilidades están hacer que los usuarios accedan fácilmente al contenido de un sitio web, elegir las etiquetas de HTML correctas para describir ese contenido y garantizar que el contenido va a tardar el mínimo tiempo posible en mostrarse. Además, en un entorno de trabajo ideal, un desarrollador Frontend analiza las maquetas de una página web realizadas por un diseñador gráfico y las interpreta en bloques de código y técnicas para lograr un producto similar al planeado.          </p>
+        </div>
+        <figure class="project-imageContainer">        
+          <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de react native">    
+        </figure>
+      </article>
+    </div>
+  </section> 
+
+  <!-- <video class="html-video" src="/videos/f8.mp4" width="1280" height="720" controls></video> -->
+  <div class="container">
+    <h2 class="event-list-title">Más sobre mi experiencia</h2>  
+  </div>
+
+  <section class="event-list">
+    <div class="container">
+      <article class="event">
+        <figure>
+          <img class="event-image" src="images/frontend.jpg" width="500" height="300"/>  
+        </figure>
+        <div class="event-detail">
+          <h3>Frontend Development en 2 minutos</h3>  
+          <p class="event-description">¿Cómo se convierten los datos en una interfaz gráfica para que el usuario la pueda observar y realizar interacciones?¿Qué tecnologías se utilizan para dicha tarea?.</p>
+          <a class="event-url" href="https://www.youtube.com/watch?v=qyHyFsT7Hig" target="_blank">Ver Video</a>
+        </div>
+      </article> 
+      <article class="event">
+        <figure>
+          <div class="video-flexible">
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/pFS4zYWxzNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <!-- <img class="event-image" src="images/frontend.jpg" width="500" height="300"/> -->  
+        </figure>
+        <div class="event-detail">
+          <h3>Frontend Development en 2 minutos</h3>  
+          <p class="event-description">¿Cómo se convierten los datos en una interfaz gráfica para que el usuario la pueda observar y realizar interacciones?¿Qué tecnologías se utilizan para dicha tarea?.</p>
+          <a class="event-url" href="https://www.youtube.com/watch?v=qyHyFsT7Hig" target="_blank">Ver Video</a>
+        </div>
+      </article>
+      <article class="event">
+        <video class="html-video" src="/videos/f8.mp4" width="1280" height="720" controls></video> 
+        <figure>
+         <!--  <img class="event-image" src="images/frontend.jpg" width="500" height="300"/>   -->
+        </figure>
+        <div class="event-detail">
+          <h3>Frontend Development en 2 minutos</h3>  
+          <p class="event-description">¿Cómo se convierten los datos en una interfaz gráfica para que el usuario la pueda observar y realizar interacciones?¿Qué tecnologías se utilizan para dicha tarea?.</p>
+          <a class="event-url" href="https://www.youtube.com/watch?v=qyHyFsT7Hig" target="_blank">Ver Video</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure>
+          <img class="event-image" src="images/frontend.jpg" width="500" height="300"/>  
+        </figure>
+        <div class="event-detail">
+          <h3>Frontend Development en 2 minutos</h3>  
+          <p class="event-description">¿Cómo se convierten los datos en una interfaz gráfica para que el usuario la pueda observar y realizar interacciones?¿Qué tecnologías se utilizan para dicha tarea?.</p>
+          <a class="event-url" href="https://www.youtube.com/watch?v=qyHyFsT7Hig" target="_blank">Ver Video</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+ <section class="contact">
+    <div class="container">
+      <form action="/suscripcion/" class="form-email">
+        <h3>¿Creamos algo juntos?</h3>  
+        <label for="email"></label>
+        <input type="text" name="email" placeholder="ej@gmail.com">
+        <button>Enviar</button>  
+      </form>
+      <div>
+        <a href="https://twitter.com" class="social-link twitter" target="_blank"></a>
+        <a href="https://facebook.com" class="social-link facebook" target="_blank"></a>
+        <a href="https://github.com/cms1995" class="social-link github" target="_blank"></a>
+        <a href="https://instagram.com" class="social-link instagram" target="_blank"></a>  
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <p>Curso de Desarrollo web online 2020 <img src="images/platzi.png" width="80" alt="platzi"></p>
+      </div>
+    </div>
+  </footer>  
+  <!-- lo primero q hay q hacer para poner .js es utilizar este tag -->
+  <script>
+    /* console.log('Hola '); */
+    const ipad = window.matchMedia('screen and (max-width:767px)'); //esto es un mediaquery en js para q el listener se abra SOLO en pantallas inferiores a Ipad
+    const menu = document.querySelector('.menu');/*  como a este selector lo voy a utilizar muchas veces, lo voy a meter dentro de una variable q la vamos a poder reutilizar*/
+    /* console.log(menu); */
+    const burgerButton = document.querySelector('#burger-menu') //ak uso el id de la linea 17. esto va a ser p q se detecte el evento de activacion del menu
+    /* console.log(burgerButton); */
+
+
+    ipad.addListener(validation)
+
+    function validation(event) {
+      if (event.matches){
+        burgerButton.addEventListener('click', Showhide) //con esto le agregamos 1 evento q reacciona cdo le hacen click al menu
+      }else{
+        burgerButton.removeEventListener('click', Showhide) //si no se cumple ese mediaquerie entonces voy a quitar el listener 
+      }
+    }
+    validation(ipad);
+
+
+    function Showhide(){
+      if (menu.classList.contains('is-active')) {// si tiene esta clase, ocultalo y sino (else)
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');/* esto selecciona el menu y con esto lo mostramos cuando se le haga 1 click(gracias a nuestro evento)*/
+      } /* con este if else se va a mostrar y ocultar el menu cdo le hagamos click */
+    }
+  </script>
+</body>
+</html>
