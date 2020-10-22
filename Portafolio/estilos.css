@@ -1,0 +1,636 @@
+/* reglas 
+selectores 
+declaraciones
+propiedades 
+variables */
+
+/* header{
+  background: pink ;
+} */
+/* selector de etiquetas: pueden ser header- seccion - article - nav */
+/* selector descendente: body header div nav ol li a */
+
+/* selector de classes: . */
+
+/* .link */
+
+/* selector de id # (ej abajo)*/
+/* #portafolio */
+
+/* gris oscuro =  #1d252c
+gris claro = #626262
+background gris = #1b2127
+celeste = #026fff 
+*/
+
+/*------------------------------- comun y container ------------------------*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?tq1sq5');
+  src:  url('/fonts/icomoon.eot?tq1sq5#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?tq1sq5') format('truetype'),
+    url('/fonts/icomoon.woff?tq1sq5') format('woff'),
+    url('/fonts/icomoon.svg?tq1sq5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+body{
+  font-family:'Source Sans Pro', sans-serif ;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+
+} 
+h1{
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -.2px;
+  color: white;
+  margin: 0;
+  /*   text-transform: uppercase;
+  */  text-decoration: dashed;
+ /*   margin: 100px 150px 70px 30px;*/
+
+
+}
+
+h1 strong{
+  color: #026fff;
+}
+
+h2{
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40;
+}
+
+.container{
+  /* border: 1px solid red; */
+  max-width: 1000px; /* primera modif nuevo proyecto*/width: 100%;
+  flex: 1;/*  con esto le estamos diciendo q tome todo el ancho disponible q tengas dentro del elemento */
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+figure {
+  margin: 0;
+}
+/*------------------------------- comun y container ------------------------*/
+
+
+
+/*------------------------------- inicio header ------------------------*/
+.header {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  flex-wrap: wrap; /* segunda modif nuevo proyecto */
+}
+
+
+header .logo img{
+  height: 70px;
+  width: 200px;
+}
+
+
+
+.menu { /* .menu hereda de .header */
+  height: inherit;
+}
+
+ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.header ol{         /* .header ol hereda de .menu */
+  display: flex;
+  height: inherit;
+
+}
+
+
+.header ol li { /* .header ol li hereda de .header ol */
+  height: inherit;
+}
+
+.header a{    /* .header a hereda de .header ol li */
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/*------------------------------- fin header ------------------------*/
+
+
+
+
+/*------------------------------- inicio hero ------------------------*/
+.hero{
+  height: 300px;
+/*background-image:url('../.vscode/hero.jpg');*/  background-color: #000000;
+  /* background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-position-x: right; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* aquí sigo modificando con el nuevo curso p acomodar la imagen y q se ponga abajo del texto. Cuando se aplia la pantalla se ponen uno al costado del otro */
+
+}
+
+.hero-image{
+   object-fit: cover;
+}
+
+/*------------------------------- fin hero------------------------*/
+
+
+
+/*------------------------------- inicio portafolio ------------------------*/
+
+.portfolio{
+  background: #fafafa;
+  padding: 20px;
+/*   background: red;
+ */}
+
+.project{
+/*   border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+ /*  border-top-color: red;
+  border-top-width: 15px;
+  border-top-style: solid; */
+  border: 1px solid gray;
+  border-radius: 10px;
+/*   border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  margin: 10px;
+  margin-bottom: 15px;
+ /*  margin-right
+  margin-left 
+  margin top*/
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* sigo con  modif. esta es la 4ta p q se acomode el texto y la imagen de portfolio */
+}
+
+.project-course,
+.project-date,
+.project-url{
+  margin: 10px 0;
+  
+}
+
+.portfolio a {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+.project-description{
+  font-size: 20px;
+}
+
+.project strong{
+  font-family:  'Fjalla One', sans-serif;
+}
+
+.project-title{
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-details{
+  width: 50%; /* ak y abajo (project-imageContainer) lo q hago es cambiar el valor absoluto q tenia y ponerlo en porcentaje p q puedan entrar en el = contenedor xq sino no caben. ahora se van a poner una al lado de la otra sin irse del ancho de la pantalla */
+}
+
+.project-imageContainer{
+  width: 50%;
+}
+
+.project-imageContainer img{ /* ak le sacamos el valor a la img q habiamos seteado en el html y aprendemos a hacer las imagenes responsive */
+  max-width: 100%;
+}
+
+
+/*------------------------------- fin portafolio ------------------------*/
+
+
+
+/*------------------------------- incio eventos ------------------------*/
+.event-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.event-list-title{
+  margin-left: 20px;
+}
+
+
+.event{
+  margin: 1%; /* mira modif:cambio width 48%*2 + margin 1*4 = 100%. Ocupa el total y los el. se van a adaptar a medida q disminuya la pantalla. de nuevo uso med. rel */
+  width: 48%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+
+
+
+.event img{
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  position: 20px;
+  text-align: center;
+}
+ 
+
+
+.event-description{
+  text-align: left;
+}
+
+
+.event-url{
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/*------------------------------- fin eventos ------------------------*/ 
+
+
+/*------------------------------- inicio contacto------------------------*/ 
+.contact{
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* de nuevo wrap en video 10 p q los elementos de las secciones vayan cayendo */
+}
+
+
+
+
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+
+}
+
+.social-link.twitter {
+  background-image: url('../images/twitter.svg');
+}
+
+.social-link.facebook {
+  background-image: url('../images/facebook.svg');
+}
+
+.social-link.github {
+  background-image: url('../images/github.svg');
+}
+
+.social-link.instagram {
+  background-image: url('../images/instagram.svg');
+}
+
+.form-email input{
+  border-color:gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center; 
+  background-position-x: 5px;
+}
+
+.form-email button{
+  display: block;
+  background: transparent;
+  color: white;
+  padding: 10px 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.form-email h3{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*------------------------------- fin contacto------------------------*/ 
+
+
+
+/*------------------------------- inicio footer ------------------------*/ 
+.footer {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.938);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* ultimo flex wrap agregado */
+ }
+
+.footer img{
+  vertical-align: middle;
+
+}
+
+
+/*------------------------------- fin footer ------------------------*/ 
+
+.html-video{
+  width: 100%;
+  height: auto;
+ /*  max-width: 100%; */
+}
+
+.youtube-video{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-flexible{
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background: blue;
+  position: relative;
+}
+
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* ak si yo tengo 40 de ancho y de alto, el 50% va a ser la mitad del elem. de ancho. quiere decir q le estamos poniendo 20px */
+  background-color: rgba(0, 0, 0, .7);
+  display:none;/*  recorda q tiene x defecto display inline, entonces le cambio a none xq sino no puedo ponerle un width y height  */
+  line-height: 40px;
+  text-align: center;
+  position: fixed; /* con esto y el z-index el menu te persigue x toda la pagina*/
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white; /* como esicono 1 texto con esto le doy color a mi   */
+}
+
+/* utilizaremos los breakpoints x default q mas se utilizan en los 3 tipos de dispositivos: tablets(768px), celulares(480 y 320px) y pc de escritorio(1024px)  */
+
+@media screen and (max-width: 1024px){
+  .portfolio{
+    padding: 0;
+  }
+  .container{
+    padding: 0 1em;
+  }
+    /* seccion .hero */
+  .hero{
+    height: auto;/*  le cambiamos el alto fijo(300px) x 1 dinámico */
+    position: relative;
+    overflow: hidden; /* esto es p q el hero no desborde a la seccion de abajo */
+    padding: 2em;
+  }
+  .hero-image{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  h1{
+    font-size: 2em;
+    z-index: 2;
+  }
+  /*fin seccion .hero */
+}
+
+@media screen and (max-width: 767px){
+  /* hasta esta medida(tablet)el menu de header se va a ver en toda la pantalla sin ir hacia abajo. para eso voy a cambiar el flex y ponerle block y luego cambiar el height q tenía */
+  .burger-button{
+    /* el menu se va a ver solo en pantallas pequeñas, hasta tablets */
+    display: block;
+  }
+
+  .header{ 
+    display: block;
+    height: auto;
+  }
+/* a la lista ol tb le sacamos el flex para q los elementos no queden uno al lado del otro sino q bajen. p eso uso initial q le da el valor inline q tenía q default esta etiqueta */
+  .header ol{
+    display: initial;
+  }
+  .header ol li{
+    height: 40px; /* separacion entre 1 elem. y otro*/
+  }
+  /* así centramos el menu para q ya no este de lado izquierdo de la pantalla */
+  .header a{
+    justify-content: center;
+    height: 40px; /* de ak para abajo le damos estilos al texto del menu  */
+    font-size: 2em;
+    text-decoration: underline; /* lo subrayo */
+    margin-bottom: .5em ;
+  }
+
+  .header .logo{
+    text-align: center; /*  así centramos la imagen */
+  }
+
+  .menu{
+    position: fixed; /* de nuevo, esto es p q nos siga x toda la pag */
+    background: rgb(5, 111, 255, .9); /* recorda q con los valores rgb, el 4° número (q se puede declarar desde 0 a 1) le da la opacidad */
+    z-index: 3;
+    top: 0; /* estas 2 cosas lo van a ubicar en la esquina izq */
+    left: -100vw;  /* como el menu va a estar escondido x defecto, tengo q usar esto para eso */
+    width: 100vw;/*  esta es otra medida relativa viewport widht. Con esto obtendriamos el 100% del ancho q tenemos dentro del viewport */
+    /* height: 100vh; */ /* lo = q arriba pero en viewport height */
+    bottom: 0; /* con esto voy a hacer q mi elemento se estire y con lo de abajo se centre xq explicitamente yo no utilice la propiedad height, dentro del elemento padre, asique este elem no tuvo nada q heredar + q 1 automático*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+
+  .menu.is-active{
+    left: 0;
+  }
+
+
+  /* seccion .portfolio */
+  .project {
+    display: block; /* le cambiamos el display de flex a block para ipad y la img se pondra abajo del texto. */
+  }
+ /*  display block y el width auto nos va a dar + rendimiento. lo = p las d abajo */
+  .project-imageContainer{
+    width: auto;
+    text-align: center;
+  }
+
+  .project-details{
+    width: auto;
+  }
+  .project-course, .project-date, .project-url {
+    margin: 0.3em 0; /* ak reseteamos los margenes p los 4 el. previos al texto principal */
+  }
+  /* ahora vamos a usar medidas relativas para q las fuentes de arriba del texto principal se hereden de la fuente default de html q es 16px */
+  .project-title{
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+  .project-url{
+    font-size: 1em;
+  }
+  .project-course{
+    font-size: .8em;
+  }
+  .project-date{
+    font-size: 1em;
+  }
+  .project-description{
+    font-size: .8em;
+  }
+  /*fin seccion .portfolio */
+  
+  /* seccion .eventos */
+  .event{
+    width: auto;
+    flex-shrink: initial;
+  }
+  .event img{
+    width: 100%;
+  }
+  /* fin seccion .eventos */
+
+}
+
+@media screen and (max-width: 480px){
+  h1{
+    font-size: 1.5em;
+  }
+  .project-details{
+    width: auto;
+    font-size: 12px;
+  }
+  .event-detail{/* le cambiamos el margen q rodea al contenedor q empieza con "Frontend Development en 2 minutos". Con todo lo d abajo ya no tenemo scroll */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+  /* fin eventos */
+  /* seccion .contacto*/
+  .contact{/* contacto tiene cierta altura definida. Entonces la vamos a modificar cuando llegue a un determinado ancho */
+    height: auto;
+    padding: 1em 0;
+    text-align: center;
+    display: block;/*aca tengo q cambiar el display flex q tenia antes p/q se puedan alinear el txt*/
+  }
+  .form-email button{ /* con esto centro el boton q dice "enviar" */
+    margin: 1em auto;
+  }
+  .form-email h3{
+    margin-top: 0;
+  }
+  /* fin seccion .contacto*/  
+  /*  seccion .footer*/
+  .footer{
+    display:block; /* volvemos a cambiar el disp p centrar los el. Recorda q el flex sirve para poner elem. 1 al costado del otro, pero deja de ser util cdo quiero q los el. se apilen */
+    text-align: center;
+    border: 1px solid transparent; /* con esto soluciono el borde blanco q me habia quedado */
+  }  
+
+}
+
+@media screen and (max-width: 320px){
+  h1{
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, .5);
+  }
+  .hero{
+    padding: 2em 1em;
+  }
+
+}
+
