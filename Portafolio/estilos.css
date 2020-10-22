@@ -100,7 +100,8 @@ h2{
 
 .container{
   /* border: 1px solid red; */
-  max-width: 1000px; /* primera modif nuevo proyecto*/width: 100%;
+  max-width: 1000px; /* primera modif nuevo proyecto*/
+  /* width: 100%;*/
   flex: 1;/*  con esto le estamos diciendo q tome todo el ancho disponible q tengas dentro del elemento */
   margin: 0 auto;
   display: inherit;
@@ -119,11 +120,12 @@ figure {
 
 /*------------------------------- inicio header ------------------------*/
 .header {
-  background-color: #000000;
+  background-color: #1b2127;
+  color: white;
   display: flex;
-  justify-content: space-between;
   height: 70px;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap; /* segunda modif nuevo proyecto */
 }
 
@@ -139,7 +141,8 @@ header .logo img{
   height: inherit;
 }
 
-ol{
+ol,
+ul{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -175,7 +178,8 @@ ol{
 /*------------------------------- inicio hero ------------------------*/
 .hero{
   height: 300px;
-/*background-image:url('../.vscode/hero.jpg');*/  background-color: #000000;
+/*background-image:url('../.vscode/hero.jpg');*/  
+  background-color: #1b2127;
   /* background-size: 500px 300px;
   background-repeat: no-repeat;
   background-position-x: right; */
@@ -403,7 +407,7 @@ ol{
 /*------------------------------- inicio footer ------------------------*/ 
 .footer {
   color: white;
-  background-color: rgba(0, 0, 0, 0.938);
+  background-color: #1b2127;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -436,7 +440,10 @@ ol{
 
 /* utilizaremos los breakpoints x default q mas se utilizan en los 3 tipos de dispositivos: tablets(768px), celulares(480 y 320px) y pc de escritorio(1024px)  */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
+  .event-list-title{
+    margin-left:0;
+  }
   .portfolio{
     padding: 0;
   }
@@ -467,19 +474,22 @@ ol{
 }
 
 @media screen and (max-width: 767px){
+  h2{
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
   /* hasta esta medida(tablet)el menu de header se va a ver en toda la pantalla sin ir hacia abajo. para eso voy a cambiar el flex y ponerle block y luego cambiar el height q tenía */
   .burger-button{
     /* el menu se va a ver solo en pantallas pequeñas, hasta tablets */
     display: block;
   }
-
   .header{ 
     display: block;
     height: auto;
   }
 /* a la lista ol tb le sacamos el flex para q los elementos no queden uno al lado del otro sino q bajen. p eso uso initial q le da el valor inline q tenía q default esta etiqueta */
   .header ol{
-    display: initial;
+    display: block;
   }
   .header ol li{
     height: 40px; /* separacion entre 1 elem. y otro*/
@@ -536,7 +546,7 @@ ol{
   /* ahora vamos a usar medidas relativas para q las fuentes de arriba del texto principal se hereden de la fuente default de html q es 16px */
   .project-title{
     font-size: 1.5em;
-    margin-bottom: 0.3em;
+    margin-bottom: .3em;
   }
   .project-url{
     font-size: 1em;
@@ -569,7 +579,6 @@ ol{
     font-size: 1.5em;
   }
   .project-details{
-    width: auto;
     font-size: 12px;
   }
   .event-detail{/* le cambiamos el margen q rodea al contenedor q empieza con "Frontend Development en 2 minutos". Con todo lo d abajo ya no tenemo scroll */
@@ -580,7 +589,7 @@ ol{
   /* seccion .contacto*/
   .contact{/* contacto tiene cierta altura definida. Entonces la vamos a modificar cuando llegue a un determinado ancho */
     height: auto;
-    padding: 1em 0;
+    padding: 1.5em 0;
     text-align: center;
     display: block;/*aca tengo q cambiar el display flex q tenia antes p/q se puedan alinear el txt*/
   }
@@ -596,7 +605,12 @@ ol{
     display:block; /* volvemos a cambiar el disp p centrar los el. Recorda q el flex sirve para poner elem. 1 al costado del otro, pero deja de ser util cdo quiero q los el. se apilen */
     text-align: center;
     border: 1px solid transparent; /* con esto soluciono el borde blanco q me habia quedado */
-  }  
+  } 
+  .social-link{
+    width: 40px;
+    height: 40px;
+    background-size: 100%;    
+  }
 
 }
 
